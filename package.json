@@ -1,0 +1,25 @@
+{
+  "name": "xsurface-multiple-crop",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "^6.1.0",
+    "@dnd-kit/sortable": "^8.0.0",
+    "babel-plugin-styled-components": "^2.1.4",
+    "html2canvas": "^1.4.1",
+    "next": "12.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "styled-components": "^6.1.1"
+  },
+  "devDependencies": {
+    "eslint": "8.54.0",
+    "eslint-config-next": "12.2"
+  } 
+}
