@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import html2canvas from "html2canvas";
+import * as saveAs from "file-saver";
 import {
   DndContext,
   closestCenter,
@@ -296,14 +297,15 @@ const MaterialBoard = () => {
       useCORS: true,
     }).then((canvas) => {
       const imageUrl = canvas.toDataURL("image/png");
-      const downloadLink = document.createElement("a");
-      downloadLink.href = imageUrl;
-      downloadLink.download = "exported-image.png";
+      saveAs(imageUrl, "exported-image.png");
+      // const downloadLink = document.createElement("a");
+      // downloadLink.href = imageUrl;
+      // downloadLink.download = "exported-image.png";
 
-      document.body.appendChild(downloadLink);
-      downloadLink.click();
+      // document.body.appendChild(downloadLink);
+      // downloadLink.click();
 
-      document.body.removeChild(downloadLink);
+      // document.body.removeChild(downloadLink);
     });
   };
 
@@ -501,10 +503,10 @@ const MaterialBoard = () => {
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 borderRadius: mat.type === "round" ? "50%" : "0%",
-                // boxShadow:
-                //   mat.type === "round"
-                //     ? "rgba(0, 0, 0, 0.1) 1px 1px 8px 5px"
-                //     : "rgba(0, 0, 0, 0.5) 1px 1px 6px 4px",
+                boxShadow:
+                  mat.type === "round"
+                    ? "rgba(0, 0, 0, 0.1) 1px 1px 1px 2px"
+                    : "rgba(0, 0, 0, 0.5) 1px 1px 6px 4px",
               }}
             >
               {selectedMaterialIndex === index && (
