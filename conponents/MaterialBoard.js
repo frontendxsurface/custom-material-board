@@ -503,10 +503,10 @@ const MaterialBoard = () => {
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 borderRadius: mat.type === "round" ? "50%" : "0%",
-                // boxShadow:
-                //   mat.type === "round"
-                //     ? "rgba(0, 0, 0, 0.1) 1px 1px 1px 2px"
-                //     : "rgba(0, 0, 0, 0.5) 1px 1px 6px 4px",
+                boxShadow:
+                  mat.type === "round"
+                    ? "rgba(0, 0, 0, 0.1) 1px 1px 1px 2px"
+                    : "rgba(0, 0, 0, 0.1) 1px 1px 1px 2px",
               }}
             >
               {selectedMaterialIndex === index && (
